@@ -14,5 +14,8 @@
     "interview"
   ],
   "author": "Erdem A. Ekin",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
 }
