@@ -4,7 +4,7 @@
   "description": "A Small RSP Game Demo for Smartface",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "nyc mocha --timeout=3000"
   },
   "keywords": [
     "game",
@@ -16,6 +16,10 @@
   "author": "Erdem A. Ekin",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^5.2.0"
+    "chai": "^4.1.2",
+    "chai-http": "^4.2.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1"
   }
 }
