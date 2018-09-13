@@ -1,3 +1,6 @@
 var app = require("./src/server");
 
-app.initServer();
+app.listen(80 , 'localhost');
+
+console.log("Server is starting...");
+

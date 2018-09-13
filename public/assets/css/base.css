@@ -1,0 +1,26 @@
+.top-nav-container {
+    display: flex;
+    justify-content: flex-start
+}
+
+a {
+    text-decoration: none;
+}
+
+.top-nav-item {
+    flex: 1;
+    padding: 30px 20px;
+    background-color: beige;
+    text-align: center;
+}
+
+.top-nav-item>a {
+    padding: 20px 40px;
+    background-color: #dedede;
+    cursor: pointer;
+}
+
+.top-nav-item>a:hover {
+    padding: 20px 40px;
+    background-color: #cbd1fa;
+}

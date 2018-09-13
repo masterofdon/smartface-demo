@@ -4,6 +4,7 @@
   "description": "A Small RSP Game Demo for Smartface",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "nyc mocha --timeout=3000"
   },
   "keywords": [
@@ -21,5 +22,8 @@
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
     "nyc": "^13.0.1"
+  },
+  "dependencies": {
+    "nodemon": "^1.18.4"
   }
 }
