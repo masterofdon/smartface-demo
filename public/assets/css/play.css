@@ -1,0 +1,109 @@
+.content-container{
+    display: flex;
+    padding : 50px;
+}
+
+.content-item{
+    flex : 1;
+}
+
+.oppenent-side-container {
+    padding: 10px;
+    background-color : bisque;
+    border-radius: 100px;
+}
+
+.player-name-area {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px 10px;
+    color : #8a5454;
+}
+
+.player-choices-area {
+    margin-top : 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 40px;
+    background-color : burlywood;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+.player-choice-container {
+    margin : 25px 15px;
+}
+
+.player-choice-container > img {
+    margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.arena-container {
+
+}
+
+.human-area {
+
+}
+
+.human-area img {
+    cursor: pointer;
+}
+
+#start-button-container {
+    height: 20%;
+    display: flex;
+}
+
+#start-button {
+    padding:  50px 50px;
+    background-color: gray;
+    color: white;
+    font-size: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    margin : auto;
+}
+
+.not-choosen {
+    display: none;
+}
+
+#start-button:hover {
+    background-color: #455bfa;
+}
+
+.player-current-choice{
+
+}
+
+.ai-current-choice {
+
+}
+
+.result-arena {
+    display: block;
+    margin-top: 60px;
+}
+
+.sides-current-choice {
+    flex : 1;
+}
+
+.result-side-left {
+    float : left;
+    margin-left: -100px;
+}
+
+.result-side-right {
+    float : right;
+    margin-right: -100px;
+}
+
+.ai-part {
+    z-index: -10;
+}

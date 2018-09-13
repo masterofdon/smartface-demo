@@ -1,0 +1,16 @@
+.content-container {
+    display: flex;
+}
+
+.content-item {
+    flex: 1;
+}
+
+.content-item span {
+    padding: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    top: 250px;
+    position: absolute;
+    font-size: 35px;
+    font-weight: 600;
+}

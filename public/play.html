@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Smartface - Simple RSP Game</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="/public/assets/css/base.css" />
+    <link rel="stylesheet" href="/public/assets/css/play.css" />
+</head>
+
+<body>
+    <header>
+        <div class="top-nav-container">
+            <div class="top-nav-item order-1">
+                <a href="/">HOME</a>
+            </div>
+            <div class="top-nav-item order-2">
+                <a href="/play">PLAY</a>
+            </div>
+            <div class="top-nav-item order-3">
+                <a href="/how-to-play">HOW TO PLAY</a>
+            </div>
+            <div class="top-nav-item order-4">
+                <a href="/documentation">DOCUMENTATION</a>
+            </div>
+        </div>
+    </header>
+    <section class="content-container">
+        <div class="content-item oppenent-side-container">
+            <div class="player-name-area">PLAYER</div>
+            <div class="player-choices-area human-area">
+                <div class="player-choice-container user-choice-container"><img class="user-choice-container-img" data-content="rock" width="256"
+                        height="256" src="/public/assets/images/rock.png" /></div>
+                <div class="player-choice-container user-choice-container"><img class="user-choice-container-img" data-content="scissors" width="256"
+                        height="256" src="/public/assets/images/scissors.png" /></div>
+                <div class="player-choice-container user-choice-container"><img class="user-choice-container-img" data-content="paper" width="256"
+                        height="256" src="/public/assets/images/paper.png" /></div>
+            </div>
+        </div>
+        <div class="content-item arena-container">
+            <div class="player-name-area">RESULT</div>
+            <div id="result-container">
+                <span>
+
+                </span>
+            </div>
+            <div id="start-button-container">
+                <span id="start-button">
+                    START GAME
+                </span>
+            </div>
+            <div class="result-arena">
+                <div class="result-side-left">
+                    <div class="sides-current-choice not-choosen" >
+                        <img width="384" height="384" id="player-current-choice" src="/public/assets/images/rock-active.png" />
+                    </div>
+                </div>
+                <div class="result-side-right">
+                    <div class="sides-current-choice not-choosen" >
+                        <img width="384" height="384" id="ai-current-choice" src="/public/assets/images/paper-active.png" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="content-item oppenent-side-container ai-part">
+            <div class="player-name-area">AI PLAYER</div>
+            <div class="player-choices-area">
+                <div class="player-choice-container">
+                    <img width="256" height="256" src="/public/assets/images/rock.png" />
+                </div>
+                <div class="player-choice-container">
+                    <img width="256" height="256" src="/public/assets/images/scissors.png" />
+                </div>
+                <div class="player-choice-container">
+                    <img width="256" height="256" src="/public/assets/images/paper.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/public/assets/js/play.js"></script>
+</body>
+
+</html>
