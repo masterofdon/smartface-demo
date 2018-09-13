@@ -10,7 +10,7 @@ a {
 .top-nav-item {
     flex: 1;
     padding: 30px 20px;
-    background-color: beige;
+    background-color: burlywood;
     text-align: center;
 }
 
@@ -18,9 +18,13 @@ a {
     padding: 20px 40px;
     background-color: #dedede;
     cursor: pointer;
+    color: #8a5454;
+    font-weight: 600;
 }
 
 .top-nav-item>a:hover {
     padding: 20px 40px;
-    background-color: #cbd1fa;
+    background-color: #455bfa;
+    color : white;
+    font-weight: 600;
 }

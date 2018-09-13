@@ -3,6 +3,18 @@ var fs = require("fs");
 
 var app = server.createServer(function (request, response) {
     var url = request.url;
+    if(url.indexOf("public/assets") != -1){
+        var type = null;
+        url = url.substr(1 , url.length - 1);
+        if(url.indexOf('css') != -1){
+            type = 'text/css';
+        }
+        else if(url.indexOf('png') != -1){
+            type = 'image/png';
+        }
+        readPageFile(response, url, type);
+        return;
+    }
     switch (url) {
         case "/":
             readPageFile(response, 'public/index.html', 'text/html');
