@@ -105,6 +105,8 @@ engine.stopAll = function () {
     playing = false;
     clearAllSelectors();
     hideCurrentSelections();
+    player.currentChoice = null;
+    aiplayer.choice = null;
 };
 
 /**
@@ -134,15 +136,13 @@ engine.changePlayerChoice = function (choice) {
             }
         });
         e.addEventListener('mouseleave', function (e) {
-            if (player.currentChoice == null) {
-                var cs = e.currentTarget.getAttribute("src");
-                if (cs.indexOf("rock") != -1) {
-                    e.currentTarget.setAttribute("src", PNG_ROCK);
-                } else if (cs.indexOf("scissors") != -1) {
-                    e.currentTarget.setAttribute("src", PNG_SCISSORS)
-                } else if (cs.indexOf("paper") != -1) {
-                    e.currentTarget.setAttribute("src", PNG_PAPER)
-                }
+            var cs = e.currentTarget.getAttribute("src");
+            if (cs.indexOf("rock") != -1 && player.currentChoice != "R") {
+                e.currentTarget.setAttribute("src", PNG_ROCK);
+            } else if (cs.indexOf("scissors") != -1 && player.currentChoice != "S") {
+                e.currentTarget.setAttribute("src", PNG_SCISSORS)
+            } else if (cs.indexOf("paper") != -1 && player.currentChoice != "P") {
+                e.currentTarget.setAttribute("src", PNG_PAPER)
             }
         });
     }
@@ -232,7 +232,7 @@ function activateSelectorHandler(e) {
                 var startButtonElem = document.getElementById('start-button');
                 startButtonElem.innerHTML = counter;
             }, function (result) {
-                
+
                 var aiChoice = document.getElementById('ai-current-choice');
                 if (aiplayer.choice == "R") {
                     aiChoice.setAttribute('src', PNG_ROCK_ACTIVE);
