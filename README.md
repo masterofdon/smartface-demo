@@ -4,6 +4,23 @@ A Simple RSP game for Smartface interview.
 
 <br>
 
+### Install
+
+```
+npm install
+```
+
+### Run
+
+```
+npm start
+```
+
+### Test
+```
+npm test
+```
+
 ## About Rock-Scissors-Paper
 You can learn about Rock-Scissors-Paper game from link below:
 <a href="https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors">Wikipedia</a>
@@ -43,3 +60,35 @@ winner is selected and another game starts after 2 seconds of pause.
 
 
   12 passing (11s)
+
+### BACKEND STRUCTURE & STRATEGIES
+
+At this point, backend consists of only a server module which deals with basic http routing and error controlling(CONTROLLER).
+Although we have started the server side game logic, at this current phase we have decided to leave the logic on client sides.
+In the future, with the help of websockets we are planning to move the logic back to server side.
+
+However, even though game rules and gameengine resides on client side, we wanted to have a full functionality and unit tests.
+We have decided to use the server side code to test. Front-end tests at this point seems to be off-target.
+
+server.js , as mentioned above, deals with routing. There are 4 pages availabe for users to route in which play
+is the target for web application's user to play the game against computer designated as AI PLAYER.
+
+For resources as css files and images, a generic routing has been added. Anything that does not fall in these routes go to 404 - Not Found.
+Also, there might be some cases in the future where content of the webpage has been removed whereas the reference page has not. This may
+cause a problem on server side which will be denoted with Http Status of 500 - Internal Server Error.
+
+### FRONTEND STRUCTURE & STRATEGIES
+
+At the frontend , a simple welcome/home page has been designed with HTML and some CSS. No user interaction at this point is being expected.
+In the future, some personal info might be needed in order the system to utilize the info to create users and authenticate them.
+
+play.js, which is the main JavaScript file that runs for the play page, contains several internal and external(regarding from nodejs perspective)
+libraries. Since there are plans to move the programme logic to server side, additional test will be required.
+
+At this point of the project, no need has been seen to use websockets as told above.
+
+### DB STRUCTURE & STRATEGIES
+
+Current phase of the project does not require a DB.
+
+

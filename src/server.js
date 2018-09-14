@@ -31,12 +31,6 @@ var app = server.createServer(function (request, response) {
         case '/500':
             readPageFile(response, 'public/500.html', 'text/html');
             break;
-        case '/public/assets/images/rps.png':
-            readPageFile(response, 'public/assets/images/rps.png', 'image/png')
-            break;
-        case '/public/assets/css/base.css':
-            readPageFile(response, 'public/assets/css/base.css', 'text/css')
-            break;
         default:
             response.writeHead("404", { 'Content-Type': 'text/plain' })
             response.end("404 - Not Found");
